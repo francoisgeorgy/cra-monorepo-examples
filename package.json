@@ -1,24 +1,28 @@
 {
-  "name": "cra-monorepo-example",
-  "version": "0.0.1",
-  "main": "index.js",
-  "repository": "",
-  "license": "MIT",
-  "private": true,
-  "scripts": {
-    "clean": "lerna clean -f --yes && rm -rf node_modules",
-    "reset": "yarn run clean && yarn",
-    "app1": "cd apps/cra-app1 && yarn start",
-    "app2": "cd apps/cra-app2 && yarn start",
-    "app3": "cd apps/cra-app3 && yarn start"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "lerna": "^2.6.0"
-  },
-  "workspaces": [
-    "apps/*",
-    "comps/*",
-    "cra-comps/*"
-  ]
+    "name": "cra-monorepo-example",
+    "version": "0.0.1",
+    "main": "index.js",
+    "repository": "",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "clean": "lerna clean -f --yes && rm -rf node_modules",
+        "reset": "yarn run clean && yarn",
+        "app1": "cd apps/cra-app1 && yarn start",
+        "app2": "cd apps/cra-app2 && yarn start",
+        "app3": "cd apps/cra-app3 && yarn start"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "lerna": "^2.11.0"
+    },
+    "workspaces": [
+        "apps/*",
+        "comps/*",
+        "cra-comps/*"
+    ],
+    "nohoist": [
+        "**/react-scripts",
+        "**/react-scripts/**"
+    ]
 }
